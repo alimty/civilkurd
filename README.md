@@ -100,4 +100,5 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 <!-- Some Personel Note -->
 
--- I'm using "npx" for package management like npm or yarn. To use yarn "npx yarn --version "`````
+
+-- You can use `gatsby develop` if you have installed gatsby cli it could make it easier.
