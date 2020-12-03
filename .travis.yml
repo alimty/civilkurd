@@ -1,12 +1,16 @@
-language: node_js
-before_script:
-  - npm install -g gatsby-cli
-node_js:
-  - "10"
-deploy:
-  provider: script
-  # Note: change "docs" to the directory where your gatsby-site lives, if necessary
-  script: npm install && npm run deploy
-  skip_cleanup: true
-  on:
-    branch: master
+name: Gatsby Publish
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: enriikke/gatsby-gh-pages-action@v2
+        with:
+          deploy-branch: gh-pages
+          gatsby-args: --prefix-paths
