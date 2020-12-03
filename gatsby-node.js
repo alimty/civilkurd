@@ -11,6 +11,6 @@ const path = require("path")
 const fs = require("fs-extra")
 
 exports.onPostBuild = () => {
-fs.copySync(path.join(_dirname, "public"), path.join(_dirname, "../public"),{ overwrite: true })
+fs.copySync(path.join(__dirname, "public"), path.join(__dirname, "../public"),{ overwrite: true })
 
 }
